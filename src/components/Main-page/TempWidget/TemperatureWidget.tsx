@@ -1,13 +1,18 @@
-import Cloud from './../../../assets/cloud.svg'
-import Sunny from './../../../assets/sunny.svg'
-import Rainy from './../../../assets/rainy.svg'
-import Thunder from './../../../assets/thunder_rain.svg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDroplet, faEye, faCloudShowersHeavy } from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useState } from 'react'
-
+import Cloud from "./../../../assets/cloud.svg";
+import Sunny from "./../../../assets/sunny.svg";
+import Rainy from "./../../../assets/rainy.svg";
+import Thunder from "./../../../assets/thunder_rain.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDroplet,
+  faEye,
+  faCloudShowersHeavy,
+} from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function TemperatureWidget(props: any) {
+  const navigate = useNavigate();
   const fetchTemp = () => {
     fetch(
       `http://api.openweathermap.org/data/2.5/weather?q=${props.location}&appid=ba24c6018ddd72041749018d0c1b1ef8&units=metric`
@@ -20,6 +25,12 @@ function TemperatureWidget(props: any) {
         setClouds(res.clouds.all);
         setPlace(res.name);
         console.log(res);
+      })
+      .catch((e) => {
+        alert(
+          "Seems like the requested location does not exist or mispelled.Kindly try again:-("
+        );
+        navigate("/search");
       });
   };
   const [temp, setTemp] = useState("0");
@@ -27,6 +38,7 @@ function TemperatureWidget(props: any) {
   const [visibility, setVisibility] = useState("0");
   const [clouds, setClouds] = useState("0");
   const [place, setPlace] = useState("0");
+  const [error, setError] = useState("0");
 
   useEffect(() => {
     fetchTemp();
@@ -37,6 +49,18 @@ function TemperatureWidget(props: any) {
     humidity: 80,
     visibility: 40,
     precipitation: 20,
+  };
+
+  const CORRECT_IMAGE = () => {
+    if (parseInt(clouds) < 30) {
+      return Sunny;
+    } else if (parseInt(clouds) < 50) {
+      return Cloud;
+    } else if (parseInt(clouds) < 90) {
+      return Thunder;
+    } else {
+      return Rainy;
+    }
   };
   return (
     <>
@@ -53,7 +77,7 @@ function TemperatureWidget(props: any) {
           <span className="text-2xl block mx-auto font-bold">{place}</span>
         </div>
         <div className="">
-          <img src={Sunny} alt="" className="h-[30em]" />
+          <img src={CORRECT_IMAGE()} alt="" className="h-[30em]" />
         </div>
         <div className="relative flex flex-col items-center">
           <div className="flex flex-col justify-start space-y-5">

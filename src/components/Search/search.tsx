@@ -17,7 +17,7 @@ function Search() {
             <input
               type="text"
               className="shadow-lg w-3/4 focus:border-none p-6 rounded-lg"
-              placeholder="Search"
+              placeholder="Search you destination"
               onChange={(e) => setSearchInput(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
