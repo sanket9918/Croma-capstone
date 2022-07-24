@@ -1,16 +1,20 @@
-import BottomFooter from "./BottomFooter/BottomFooter"
-import TemperatureWidget from "./TempWidget/TemperatureWidget"
+import { useParams } from "react-router-dom";
+import Header from "../Header/header";
+import { Scaffold } from "./../Scaffold";
+import BottomFooter from "./BottomFooter/BottomFooter";
+import TemperatureWidget from "./TempWidget/TemperatureWidget";
 
-function MainPage() {
-    return (
-        <>
-            <div className="container mt-6 p-4 md:p-8 mx-auto">
-                <TemperatureWidget />
-                <BottomFooter />
-
-            </div>
-
-        </>
-    )
+function MainPage(props: any) {
+  const params = useParams();
+  const location = params.location ?? "Bengaluru";
+  return (
+    <>
+      <Scaffold>
+        <Header />
+        <TemperatureWidget location={location} />
+        <BottomFooter />
+      </Scaffold>
+    </>
+  );
 }
-export default MainPage
+export default MainPage;
