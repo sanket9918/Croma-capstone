@@ -38,7 +38,6 @@ function TemperatureWidget(props: any) {
   const [visibility, setVisibility] = useState("0");
   const [clouds, setClouds] = useState("0");
   const [place, setPlace] = useState("0");
-  const [error, setError] = useState("0");
 
   useEffect(() => {
     fetchTemp();
@@ -85,7 +84,8 @@ function TemperatureWidget(props: any) {
               <FontAwesomeIcon icon={faDroplet} /> Humidity: {humidity}%
             </span>
             <span className="text-base font-bold">
-              <FontAwesomeIcon icon={faEye} /> Visibility: {visibility}
+              <FontAwesomeIcon icon={faEye} /> Visibility: {+visibility / 1000}{" "}
+              km
             </span>
             <span className="text-base font-bold">
               <FontAwesomeIcon icon={faCloudShowersHeavy} /> Clouds: {clouds}%

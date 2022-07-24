@@ -4,7 +4,7 @@ import { Scaffold } from "./../Scaffold";
 import BottomFooter from "./BottomFooter/BottomFooter";
 import TemperatureWidget from "./TempWidget/TemperatureWidget";
 
-function MainPage(props: any) {
+function MainPage() {
   const params = useParams();
   const location = params.location ?? "Bengaluru";
   return (
