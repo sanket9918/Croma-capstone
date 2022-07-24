@@ -43,13 +43,13 @@ function TemperatureWidget(props: any) {
   useEffect(() => {
     fetchTemp();
   }, []);
-  const API_RESPONSE = {
-    temp: 39,
-    location: "Bengaluru",
-    humidity: 80,
-    visibility: 40,
-    precipitation: 20,
-  };
+  // const API_RESPONSE = {
+  //   temp: 39,
+  //   location: "Bengaluru",
+  //   humidity: 80,
+  //   visibility: 40,
+  //   precipitation: 20,
+  // };
 
   const CORRECT_IMAGE = () => {
     if (parseInt(clouds) < 30) {
