@@ -6,6 +6,7 @@ The project is currently WIP.
 
 Screenshots:
 
-<p float="left">
+<p style="text-align: center;">
 <img src="./images/image1.png"  height="400" />
+<img src="./images/book.png"  height="600" />
 </p>
