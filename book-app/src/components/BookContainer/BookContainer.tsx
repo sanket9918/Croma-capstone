@@ -52,11 +52,11 @@ function BookContainer({ children }: IBookItems) {
       : 0;
   }, []);
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative">
       <div className="flex justify-between absolute top left w-full h-full">
         <button
           onClick={movePrev}
-          className=" text-white w-10 h-full text-center opacity-100 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+          className="md:-ml-12 text-white w-10 h-full text-center opacity-100 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
           disabled={isDisabled("prev")}
         >
           <div className="w-10 h-10 rounded-full flex justify-center items-center bg-black text-white">
@@ -68,7 +68,7 @@ function BookContainer({ children }: IBookItems) {
         </button>
         <button
           onClick={moveNext}
-          className=" text-white w-10 h-full text-center opacity-100 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+          className=" md:-mr-12 text-white w-10 h-full text-center opacity-100 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
           disabled={isDisabled("next")}
         >
           <div className="w-10 h-10 rounded-full flex justify-center items-center bg-black text-white">
