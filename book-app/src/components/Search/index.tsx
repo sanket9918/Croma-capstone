@@ -9,6 +9,7 @@ interface IResults {
 function Search() {
   const [searchInput, setSearchInput] = useState("");
   const [resultData, setResultData] = useState<IResults[]>();
+  const [loading, setLoading] = useState(false);
   return (
     <>
       <div className="min-h-screen">
@@ -21,13 +22,25 @@ function Search() {
               onChange={(e) => setSearchInput(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
+                  setLoading(true);
                   axios
                     .get(`https://openlibrary.org/search.json?q=${searchInput}`)
-                    .then((e) => setResultData(e.data.docs));
+                    .then((e) => setResultData(e.data.docs))
+                    .then((e) => setLoading(false))
+                    .catch((e) => alert("Sorry something went wrong."));
                 }
               }}
             ></input>
           </div>
+          {loading ? (
+            <>
+              <div className="text-center mt-6 block">
+                <h1 className="text-3xl">Loading...</h1>
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
           <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 mx-auto">
             {resultData?.map((e) => (
               <>
