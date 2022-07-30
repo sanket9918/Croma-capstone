@@ -8,8 +8,10 @@ function Header() {
       <div className="flex flex-wrap justify-between items-center mx-auto">
         {/* Logo */}
         <div className="mt-2 md:mt-5 px-2">
-          <h1 className="text-3xl font-bold">WeatherGo.</h1>
-          <p className="font-medium">By Sanket</p>
+          <Link to="/">
+            <h1 className="text-3xl font-bold">WeatherGo.</h1>
+            <p className="font-medium">By Sanket</p>
+          </Link>
         </div>
         {/* Menu items */}
         <div className="hidden w-full md:block md:w-auto">

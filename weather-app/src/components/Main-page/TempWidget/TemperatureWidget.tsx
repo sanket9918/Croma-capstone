@@ -23,8 +23,7 @@ function TemperatureWidget(props: any) {
         setHumidity(res.main.humidity);
         setVisibility(res.visibility);
         setClouds(res.clouds.all);
-        setPlace(res.name);
-        console.log(res);
+        setPlace(res.name);       
       })
       .catch((e) => {
         alert(

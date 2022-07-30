@@ -1,0 +1,481 @@
+{
+  "links": {
+    "self": "/authors/OL1394244A/works.json?limit=10",
+    "author": "/authors/OL1394244A",
+    "next": "/authors/OL1394244A/works.json?limit=10&offset=10"
+  },
+  "size": 63,
+  "entries": [
+    {
+      "subjects": ["Short stories", "Washington (d.c.), fiction"],
+      "key": "/works/OL21230591W",
+      "title": "Future Washington",
+      "authors": [
+        {
+          "author": { "key": "/authors/OL1394244A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL1385346A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL7512650A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL29268A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL7479441A" },
+          "type": { "key": "/type/author_role" }
+        }
+      ],
+      "type": { "key": "/type/work" },
+      "covers": [725594],
+      "latest_revision": 3,
+      "revision": 3,
+      "created": {
+        "type": "/type/datetime",
+        "value": "2020-08-14T17:34:43.654672"
+      },
+      "last_modified": {
+        "type": "/type/datetime",
+        "value": "2022-07-01T23:33:21.684068"
+      }
+    },
+    {
+      "description": "Information Doesn't Want to Be Free takes on the state of copyright and creative success in the digital age. Can small artists still thrive in the Internet era? Can giant record labels avoid alienating their audiences? This is a book about the pitfalls and the opportunities that creative industries (and individuals) are confronting today -- about how the old models have failed or found new footing, and about what might soon replace them. Information Doesn't Want to Be Free offers a guide to the ways creativity and the Internet interact today, and to what might be coming next.",
+      "title": "Information Doesn't Want to Be Free",
+      "covers": [8013913, 7407693, 10861390],
+      "subject_places": ["United States", "F\u00e8orenta staterna", "USA"],
+      "subjects": [
+        "Copyright",
+        "Digitala medier",
+        "Popular works",
+        "Digital rights management",
+        "Digitale Daten",
+        "Upphovsr\u00e8att",
+        "Urheberrecht",
+        "Authors and publishers",
+        "International Copyright",
+        "Copyright, united states",
+        "Copyright, international",
+        "Autor"
+      ],
+      "key": "/works/OL17329377W",
+      "authors": [
+        {
+          "author": { "key": "/authors/OL1394244A" },
+          "type": { "key": "/type/author_role" }
+        }
+      ],
+      "subject_times": ["21st century"],
+      "type": { "key": "/type/work" },
+      "latest_revision": 15,
+      "revision": 15,
+      "created": {
+        "type": "/type/datetime",
+        "value": "2016-04-07T13:15:01.899973"
+      },
+      "last_modified": {
+        "type": "/type/datetime",
+        "value": "2022-06-03T04:54:26.939428"
+      }
+    },
+    {
+      "description": "Unique visions and astonishments\u2014new stories by:Tobias S. Buckell and Karl SchroederCory DoctorowNeil GaimanKathleen Ann GoonanAlastair ReynoldsMichael SwanwickLast year's best short-form SF\u2014selected by acclaimed, award-winning editors and anthologists David G. Hartwell and Kathryn Cramer\u2014offers stunning new extrapolations on what awaits humankind beyond the next dawn. The art of the story is explored boldly and provocatively in this powerful new collection of Year's Best speculative fiction.",
+      "covers": [6301605],
+      "key": "/works/OL14914302W",
+      "authors": [
+        {
+          "author": { "key": "/authors/OL457863A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL3401661A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL772943A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL53305A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL29759A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL3831144A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL1432654A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL1434466A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL1604887A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL3100999A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL1394244A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL1404857A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL234532A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL39102A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL7034935A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL1392192A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL1070510A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL7502174A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL23280A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL6548079A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL359235A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL19107A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL1394986A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL1427700A" },
+          "type": { "key": "/type/author_role" }
+        },
+        {
+          "author": { "key": "/authors/OL1033105A" },
+          "type": { "key": "/type/author_role" }
+        }
+      ],
+      "title": "Year's Best SF 14",
+      "subjects": [
+        "Fiction",
+        "Science Fiction",
+        "Short Stories",
+        "Science fiction, american"
+      ],
+      "type": { "key": "/type/work" },
+      "latest_revision": 21,
+      "revision": 21,
+      "created": {
+        "type": "/type/datetime",
+        "value": "2010-03-12T11:32:31.523088"
+      },
+      "last_modified": {
+        "type": "/type/datetime",
+        "value": "2022-06-02T20:13:43.002002"
+      }
+    },
+    {
+      "type": { "key": "/type/work" },
+      "title": "Surviving Tomorrow",
+      "authors": [
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL7306886A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL53305A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL25161A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL1394244A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL2801197A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL6890242A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL7228210A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL9103233A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL28760A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL1232623A" }
+        }
+      ],
+      "covers": [11174500],
+      "key": "/works/OL24537066W",
+      "latest_revision": 8,
+      "revision": 8,
+      "created": {
+        "type": "/type/datetime",
+        "value": "2021-05-28T02:15:13.898502"
+      },
+      "last_modified": {
+        "type": "/type/datetime",
+        "value": "2022-04-25T19:50:07.223693"
+      }
+    },
+    {
+      "title": "Rapture of the Nerds",
+      "covers": [7250370, 7889257, 7407772, 10132526],
+      "key": "/works/OL16646248W",
+      "authors": [
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL1394244A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL343157A" }
+        }
+      ],
+      "type": { "key": "/type/work" },
+      "description": {
+        "type": "/type/text",
+        "value": "A tale set at the end of the twenty-first century finds the planet's divided hominid population subjected to the forces of a splintery metaconsciousness that inundates networks with plans for cataclysmic technologies, prompting an unwitting jury member to participate in a grueling decision."
+      },
+      "subjects": [
+        "Dystopias",
+        "Jury",
+        "Technology and civilization",
+        "Fiction",
+        "Fiction, science fiction, general"
+      ],
+      "latest_revision": 8,
+      "revision": 8,
+      "created": {
+        "type": "/type/datetime",
+        "value": "2012-05-23T10:19:09.251782"
+      },
+      "last_modified": {
+        "type": "/type/datetime",
+        "value": "2022-04-24T20:18:51.345221"
+      }
+    },
+    {
+      "type": { "key": "/type/work" },
+      "title": "The Rapture of the Nerds",
+      "authors": [
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL343157A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL1394244A" }
+        }
+      ],
+      "covers": [11428419],
+      "key": "/works/OL24707494W",
+      "latest_revision": 3,
+      "revision": 3,
+      "created": {
+        "type": "/type/datetime",
+        "value": "2021-07-14T22:49:40.348912"
+      },
+      "last_modified": {
+        "type": "/type/datetime",
+        "value": "2022-04-24T20:18:51.345221"
+      }
+    },
+    {
+      "title": "Chaos and Cosmos Sampler, Part II",
+      "key": "/works/OL21914164W",
+      "authors": [
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL7753430A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL3106064A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL1425963A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL7486501A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL1394244A" }
+        }
+      ],
+      "type": { "key": "/type/work" },
+      "subjects": [
+        "Fiction, science fiction, collections & anthologies",
+        "Fiction, fantasy, collections & anthologies"
+      ],
+      "latest_revision": 4,
+      "revision": 4,
+      "created": {
+        "type": "/type/datetime",
+        "value": "2020-09-01T09:41:26.145461"
+      },
+      "last_modified": {
+        "type": "/type/datetime",
+        "value": "2022-04-09T00:28:30.620839"
+      }
+    },
+    {
+      "description": {
+        "type": "/type/text",
+        "value": "\"Further selected essays on productivity, creativity, parenting, and politics in the 21st century\"--Cover."
+      },
+      "title": "Context",
+      "covers": [9046828, 8283345],
+      "subjects": [
+        "Social norms",
+        "Digital media",
+        "Intellectual property",
+        "Copyright and electronic data processing",
+        "Social aspects",
+        "Creative ability in technology",
+        "Internet",
+        "Information society",
+        "Digital communications",
+        "Technology",
+        "Information technology",
+        "Technology, social aspects"
+      ],
+      "subject_people": ["Cory Doctorow"],
+      "key": "/works/OL18011572W",
+      "authors": [
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL1394244A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL291900A" }
+        }
+      ],
+      "type": { "key": "/type/work" },
+      "latest_revision": 6,
+      "revision": 6,
+      "created": {
+        "type": "/type/datetime",
+        "value": "2018-11-29T07:14:24.956033"
+      },
+      "last_modified": {
+        "type": "/type/datetime",
+        "value": "2022-04-05T17:23:00.885783"
+      }
+    },
+    {
+      "title": "Escape Pod",
+      "covers": [10490345],
+      "key": "/works/OL22707218W",
+      "authors": [
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL7533661A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL2879883A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL6575473A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL1394244A" }
+        },
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL4094327A" }
+        }
+      ],
+      "type": { "key": "/type/work" },
+      "subjects": ["American literature"],
+      "latest_revision": 4,
+      "revision": 4,
+      "created": {
+        "type": "/type/datetime",
+        "value": "2020-10-24T20:22:38.813627"
+      },
+      "last_modified": {
+        "type": "/type/datetime",
+        "value": "2022-07-18T14:09:54.986302"
+      }
+    },
+    {
+      "type": { "key": "/type/work" },
+      "title": "The Great Big Beautiful Tomorrow  Iyi G\u00fczel Muhtesem Yarin",
+      "authors": [
+        {
+          "type": { "key": "/type/author_role" },
+          "author": { "key": "/authors/OL1394244A" }
+        }
+      ],
+      "covers": [12237278],
+      "key": "/works/OL26237314W",
+      "latest_revision": 2,
+      "revision": 2,
+      "created": {
+        "type": "/type/datetime",
+        "value": "2021-10-29T22:17:11.930240"
+      },
+      "last_modified": {
+        "type": "/type/datetime",
+        "value": "2022-01-12T19:51:25.459478"
+      }
+    }
+  ]
+}
