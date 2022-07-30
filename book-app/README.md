@@ -1,2 +1,2 @@
-# Book App for interanl training
+# Book App for internal training
 

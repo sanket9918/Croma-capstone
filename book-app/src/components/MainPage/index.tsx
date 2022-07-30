@@ -1,4 +1,5 @@
 import { Scaffold } from "../Scaffold";
+import BottomFooter from "./BottomFooter";
 import HeaderMainPage from "./header";
 import Books from "./Sections/Book/Books";
 function MainPage() {
@@ -6,6 +7,7 @@ function MainPage() {
     <Scaffold>
       <HeaderMainPage />
       <Books />
+      <BottomFooter />
     </Scaffold>
   );
 }
