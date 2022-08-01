@@ -10,4 +10,4 @@ Screenshots:
 <img src="./images/image1.png"  height="400" />
 <img src="./images/book.png"  height="600" />
 <img src="./images/search.png"  height="400" />
-</p>s
+</p>
