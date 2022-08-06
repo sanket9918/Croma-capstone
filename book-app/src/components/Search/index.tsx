@@ -26,8 +26,8 @@ function Search() {
                   axios
                     .get(`https://openlibrary.org/search.json?q=${searchInput}`)
                     .then((e) => setResultData(e.data.docs))
-                    .then((e) => setLoading(false))
-                    .catch((e) => alert("Sorry something went wrong."));
+                    .then(() => setLoading(false))
+                    .catch(() => alert("Sorry something went wrong."));
                 }
               }}
             ></input>
