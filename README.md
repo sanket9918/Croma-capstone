@@ -1,8 +1,8 @@
 # Capstone Project for Croma Campus (Internal Training)
 
-The project is a ongoing project prepared to demonstrate the curse content effectiveness by creating a Weather app to demostrate prficiency in the technology involved in the training.
+The project is a ongoing project prepared to demonstrate the course content effectiveness by creating a Weather app to demostrate prficiency in the technology involved in the training.
 
-The project is currently WIP.
+The project will get updated with the progress of the training.
 
 Screenshots:
 
