@@ -61,6 +61,7 @@ public class DBList {
                         setDb(centralizedDB);
                         // System.out.println(centralizedDB);
                         break;
+
                     case "D":
                         DistributedDB distributedDB = new DistributedDB(arrayList.get(1),
                                 Double.parseDouble(arrayList.get(2)), Double.parseDouble(arrayList.get(3)),
@@ -68,6 +69,7 @@ public class DBList {
                         setDb(distributedDB);
                         // System.out.println(distributedDB);
                         break;
+
                     case "H":
                         HomogenousDb homogenousDb = new HomogenousDb(arrayList.get(1),
                                 Double.parseDouble(arrayList.get(2)), Double.parseDouble(arrayList.get(3)),
@@ -75,6 +77,7 @@ public class DBList {
                         setDb(homogenousDb);
                         // System.out.println(homogenousDb);
                         break;
+
                     case "E":
                         HeterogenousDB heterogenousDB = new HeterogenousDB(arrayList.get(1),
                                 Double.parseDouble(arrayList.get(2)), Double.parseDouble(arrayList.get(3)),
@@ -83,7 +86,7 @@ public class DBList {
                         // System.out.println(heterogenousDB);
                         break;
                     default:
-                        System.out.println("Error");
+                        System.out.println("");
                 }
 
                 sc.close();
@@ -130,6 +133,8 @@ public class DBList {
     public static void main(String[] args) {
         DBList dbList = new DBList();
         dbList.readFile("test.txt");
+
+        System.out.println("---generateReport---\n\n");
         dbList.generateReport();
         System.out.println("\n\n---generateReportByName---\n\n");
         dbList.generateReportByName();
