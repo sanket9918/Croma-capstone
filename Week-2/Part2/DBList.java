@@ -107,13 +107,34 @@ public class DBList {
             System.out.println(db[i].toString());
 
         }
+    }
 
+    public void generateReportByName() {
+
+        Arrays.sort(getDb());
+        for (int i = 0; i < db.length; i++) {
+            System.out.println(db[i].toString());
+
+        }
+
+    }
+
+    public void generateReportByMonth() {
+        Arrays.sort(getDb(), new SortByCost());
+        for (int i = 0; i < db.length; i++) {
+            System.out.println(db[i].toString());
+
+        }
     }
 
     public static void main(String[] args) {
         DBList dbList = new DBList();
         dbList.readFile("test.txt");
         dbList.generateReport();
+        System.out.println("\n\n---generateReportByName---\n\n");
+        dbList.generateReportByName();
+        System.out.println("\n\n---generateReportByCost---\n\n");
+        dbList.generateReportByMonth();
 
     }
 }
