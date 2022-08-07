@@ -47,9 +47,9 @@ public class DistributedDB extends DB {
 
     @Override
     public String toString() {
-        return "Monthly cost : " + monthlyCost() + "\n" + super.toString()
+        return "Name:" + name + " Monthly cost : " + monthlyCost() + "\n" + super.toString()
                 + "\nNumber of Users: " + getNoOfUsers() + "\nCost per user: $" + getCostPerUser() + "\nUser cost: $"
-                + userCost() + "\nCost Factor: " + getCostFactor();
+                + userCost() + "\nCost Factor: " + getCostFactor() + "\n\n";
     }
 
     public static void main(String[] args) {

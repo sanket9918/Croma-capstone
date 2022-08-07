@@ -27,7 +27,7 @@ public class CentralizedDB extends DB {
         String superString = super.toString();
         double monthlyCost = monthlyCost();
         return "Database One (class CentralizedDB) Monthly cost: $" + monthlyCost + "\n" + superString + "\nLicense: $"
-                + licence;
+                + licence + "\n\n";
     }
 
     public static void main(String[] args) {
