@@ -1,6 +1,6 @@
 package com.sanket.bookapp.controller;
 
-import java.net.http.HttpResponse;
+import java.util.List;
 
 import com.sanket.bookapp.model.Favorite;
 import com.sanket.bookapp.service.favoriteService;
@@ -36,6 +36,11 @@ public class FavoriteController {
     public Favorite favorite(@PathVariable int id) {
         Favorite favorite = favoriteService.getFavorite(id);
         return favorite;
+    }
+
+    @GetMapping("/favoriteByUser/{id}")
+    public ResponseEntity<List<Favorite>> getFavouriteByUser(@PathVariable int id) {
+        return favoriteService.getFavouriteofOneUser(id);
     }
 
 }

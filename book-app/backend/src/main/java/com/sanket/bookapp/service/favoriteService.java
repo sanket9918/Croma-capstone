@@ -1,5 +1,6 @@
 package com.sanket.bookapp.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.sanket.bookapp.model.Favorite;
@@ -39,5 +40,10 @@ public class favoriteService {
             return new ResponseEntity<>("Sorry, we couldn't process the request due to some error",
                     HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    public ResponseEntity<List<Favorite>> getFavouriteofOneUser(int id) {
+        List<Favorite> favorites = favoriteRepository.findByUserId(id);
+        return new ResponseEntity<List<Favorite>>(favorites, HttpStatus.OK);
     }
 }
