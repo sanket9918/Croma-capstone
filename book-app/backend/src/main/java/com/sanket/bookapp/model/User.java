@@ -1,9 +1,13 @@
 package com.sanket.bookapp.model;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -22,4 +26,13 @@ public class User {
     private String userName;
     private String password;
     private String email;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Favorite> favorites;
+
+    public User(String userName, String password, String email) {
+        this.userName = userName;
+        this.password = password;
+        this.email = email;
+    }
 }
