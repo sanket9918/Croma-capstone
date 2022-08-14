@@ -59,7 +59,7 @@ public class DistributedDB extends DB {
 
     @Override
     public int compareTo(DB arg0) {
-        // TODO Auto-generated method stub
+
         return 0;
     }
 

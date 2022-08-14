@@ -3,7 +3,7 @@ package Part1;
 public class HeterogenousDB extends DistributedDB {
     public HeterogenousDB(String name, double cost, double storage, int noOfUsers, double costPerUser) {
         super(name, cost, storage, noOfUsers, costPerUser);
-        // TODO Auto-generated constructor stub
+
     }
 
     /**
