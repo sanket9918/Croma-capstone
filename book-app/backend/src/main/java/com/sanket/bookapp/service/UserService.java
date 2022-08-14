@@ -1,6 +1,7 @@
 package com.sanket.bookapp.service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.sanket.bookapp.model.User;
 import com.sanket.bookapp.repository.UserRepository;
@@ -22,6 +23,30 @@ public class UserService implements UserDetailsService {
         User user = userRepository.findByUserName(username);
         return new org.springframework.security.core.userdetails.User(user.getUserName(), user.getPassword(),
                 new ArrayList<>());
+    }
+
+    public User addUser(User user) {
+        User usr = userRepository.save(user);
+        return usr;
+    }
+
+    public User updateUser(User user) {
+        User usr = userRepository.save(user);
+        return usr;
+    }
+
+    public String deleteUser(int id) {
+        userRepository.deleteById(id);
+        return "User deleted successfully";
+    }
+
+    public User getOneUser(int id) {
+        User usr = userRepository.findById(id).orElse(null);
+        return usr;
+    }
+
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 
 }
