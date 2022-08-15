@@ -1,7 +1,10 @@
 package com.sanket.bookapp.controller;
 
+import javax.persistence.Entity;
+
 import com.sanket.bookapp.model.Auth;
 import com.sanket.bookapp.model.User;
+import com.sanket.bookapp.repository.UserRepository;
 import com.sanket.bookapp.service.UserService;
 import com.sanket.bookapp.util.JWTUtil;
 
@@ -19,6 +22,21 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+class LoginType {
+    String token;
+    int id;
+    String userName;
+    String email;
+}
+
 @RestController
 public class BookController {
 
@@ -31,6 +49,9 @@ public class BookController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private UserRepository userRepository;
+
     @GetMapping("/")
     public String greet() {
         return "Welcome to Book app";
@@ -38,14 +59,19 @@ public class BookController {
     }
 
     @PostMapping("/authenticate")
-    public ResponseEntity<String> generateToken(@RequestBody Auth authRequest) {
+    public ResponseEntity<LoginType> generateToken(@RequestBody Auth authRequest) {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authRequest.getUserName(), authRequest.getPassword()));
-
-            return new ResponseEntity<String>(jwtUtil.generateToken(authRequest.getUserName()), HttpStatus.OK);
+            String token = jwtUtil.generateToken(authRequest.getUserName());
+            User user = userRepository.findByUserName(authRequest.getUserName());
+            int id = user.getId();
+            String userName = user.getUserName();
+            String email = user.getEmail();
+            LoginType loginType = new LoginType(token, id, userName, email);
+            return new ResponseEntity<>(loginType, HttpStatus.OK);
         } catch (Exception ex) {
-            return new ResponseEntity<>("Invalid username or password", HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
     }
@@ -62,6 +88,10 @@ public class BookController {
         return userService.updateUser(user);
     }
 
+    @GetMapping("/getOneUser/{id}")
+    public User getOneUser(@PathVariable int id) {
+        return userService.getOneUser(id);
+    }
 
     @DeleteMapping("/user/{id}")
     public String delete(@PathVariable int id) {

@@ -10,6 +10,15 @@ function Search() {
   const [searchInput, setSearchInput] = useState("");
   const [resultData, setResultData] = useState<IResults[]>();
   const [loading, setLoading] = useState(false);
+
+  const config = {
+    headers: {
+      Authorization: `Bearer ${sessionStorage.getItem("key")}`,
+      "Access-Control-Allow-Methods": "OPTIONS,GET,PUT,POST,DELETE",
+      "Access-Control-Allow-Credentials": true,
+    },
+  };
+
   return (
     <>
       <div className="min-h-screen">
@@ -49,6 +58,29 @@ function Search() {
                     <h5 className="mb-2 text-base font-bold tracking-tight text-gray-900 dark:text-white">
                       {e.title}
                     </h5>
+                    <div
+                      className="cursor-pointer"
+                      onClick={() => {
+                        const favPayload = {
+                          book_name: e.title,
+                          user: {
+                            id: sessionStorage.getItem("id"),
+                            userName: sessionStorage.getItem("userName"),
+                            email: sessionStorage.getItem("email"),
+                          },
+                        };
+                        axios
+                          .post(
+                            "http://localhost:8000/addFavorite",
+                            favPayload,
+                            config
+                          )
+                          .then(() => alert("Favorite added successfully"))
+                          .catch((e) => alert("Sorry something went wrong"));
+                      }}
+                    >
+                      <p>Add fav</p>
+                    </div>
                   </div>
                 </div>
               </>
@@ -58,5 +90,6 @@ function Search() {
       </div>
     </>
   );
-}
+  };
+
 export default Search;

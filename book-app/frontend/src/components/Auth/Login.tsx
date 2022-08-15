@@ -1,17 +1,41 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Scaffold } from "../Scaffold";
 
 function Login() {
   const [userName, SetUserName] = useState("");
   const [password, setPassword] = useState("");
+  let navigate = useNavigate();
+
+  const handleSubmit = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    const user = {
+      userName: userName,
+      password: password,
+    };
+    axios
+      .post("http://localhost:8000/authenticate", user)
+      .then((res) => {
+        console.log(res);
+        alert("Login successfull");
+        sessionStorage.setItem("key", res.data["token"]);
+        sessionStorage.setItem("id", res.data["id"]);
+        sessionStorage.setItem("userName", res.data["userName"]);
+        sessionStorage.setItem("email", res.data["email"]);
+        navigate("/");
+      })
+      .catch((e) => {
+        alert("Login not successful");
+      });
+  };
   return (
     <>
       <Scaffold>
         <div className="flex justify-center items-center min-h-screen">
           <div className="max-w-md h-auto bg-white shadow-lg rounded-2xl p-6  w-full">
             <h1 className="font-bold text-2xl">Login</h1>
-            <form action="" className="mt-10">
+            <form className="mt-10" onSubmit={handleSubmit} method="POST">
               <label className="text-xl font-medium mt-8">Username</label>
               <input
                 type="text"

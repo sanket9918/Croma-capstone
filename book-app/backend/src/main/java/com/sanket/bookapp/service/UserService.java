@@ -53,6 +53,7 @@ public class UserService implements UserDetailsService {
         }
 
     }
+
     public String deleteUser(int id) {
         userRepository.deleteById(id);
         return "User deleted successfully";
