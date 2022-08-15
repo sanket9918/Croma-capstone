@@ -6,6 +6,8 @@ import com.sanket.bookapp.service.UserService;
 import com.sanket.bookapp.util.JWTUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -35,27 +38,30 @@ public class BookController {
     }
 
     @PostMapping("/authenticate")
-    public String generateToken(@RequestBody Auth authRequest) throws Exception {
+    public ResponseEntity<String> generateToken(@RequestBody Auth authRequest) {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authRequest.getUserName(), authRequest.getPassword()));
+
+            return new ResponseEntity<String>(jwtUtil.generateToken(authRequest.getUserName()), HttpStatus.OK);
         } catch (Exception ex) {
-            throw new Exception("inavalid username/password");
+            return new ResponseEntity<>("Invalid username or password", HttpStatus.NOT_FOUND);
         }
-        return jwtUtil.generateToken(authRequest.getUserName());
+
     }
 
     @PostMapping("/registerUser")
+    @ResponseBody
     public User addUser(@RequestBody User user) {
         User usr = userService.addUser(user);
         return usr;
     }
 
     @PutMapping("/user")
-    public User updateUser(@RequestBody User user) {
-        User usr = userService.updateUser(user);
-        return usr;
+    public ResponseEntity<User> updateUser(@RequestBody User user) {
+        return userService.updateUser(user);
     }
+
 
     @DeleteMapping("/user/{id}")
     public String delete(@PathVariable int id) {

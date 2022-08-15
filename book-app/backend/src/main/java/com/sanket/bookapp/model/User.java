@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,7 +27,10 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String userName;
+
+    @JsonProperty(access = Access.WRITE_ONLY)
     private String password;
+
     private String email;
 
     @OneToMany(cascade = CascadeType.ALL)

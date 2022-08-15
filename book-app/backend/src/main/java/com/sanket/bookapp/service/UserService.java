@@ -2,11 +2,14 @@ package com.sanket.bookapp.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import com.sanket.bookapp.model.User;
 import com.sanket.bookapp.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -30,11 +33,26 @@ public class UserService implements UserDetailsService {
         return usr;
     }
 
-    public User updateUser(User user) {
-        User usr = userRepository.save(user);
-        return usr;
-    }
+    // public User updateUser(User user) {
 
+    // User usr = userRepository.save(user);
+    // return usr;
+    // }
+
+    public ResponseEntity<User> updateUser(User user) {
+        Optional<User> user1 = userRepository.findById(user.getId());
+        if (user1.isPresent()) {
+            User _user = user1.get();
+            _user.setUserName(user.getUserName());
+            _user.setEmail(user.getEmail());
+            _user.setPassword(user.getPassword());
+
+            return new ResponseEntity<>(userRepository.save(_user), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+    }
     public String deleteUser(int id) {
         userRepository.deleteById(id);
         return "User deleted successfully";
