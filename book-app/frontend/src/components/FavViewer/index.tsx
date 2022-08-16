@@ -44,9 +44,21 @@ function FavoriteViewer() {
             <p>Loading...</p>
           ) : (
             favList.map((e) => (
-              <h3 key={e.id} className="text-xl mb-3 font-bold">
-                - {e.book_name}
-              </h3>
+              
+              <div className="mx-auto">
+                <div className="flex justify-between items-center">
+                  <h3 key={e.id} className="text-xl mb-3 font-bold">
+                    - {e.book_name}
+                  </h3>
+                  <button className="mb-5 p-2 bg-black text-white rounded-lg" onClick={(e1: React.SyntheticEvent) => {
+                    e1.preventDefault();
+                    axios.delete(`http://localhost:8000/deleteFavorite/${e.id}`, config).then((res) => {
+                      alert("Fav book is deleted")
+                      window.location.reload();
+                    }).catch((e) => alert("Sorry fav book couldn't be deleted."))
+                  }}>Delete</button>
+                </div>
+              </div>
             ))
           )}
         </div>

@@ -53,7 +53,7 @@ function Search() {
           <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 mx-auto">
             {resultData?.map((e) => (
               <>
-                <div className="max-w-sm w-[15em] h-full mx-auto bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-5 hover:bg-slate-200">
+                <div className="max-w-sm w-[15em] h-full mx-auto bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-5 hover:bg-slate-200 dark:text-white">
                   <div className="p-5">
                     <h5 className="mb-2 text-base font-bold tracking-tight text-gray-900 dark:text-white">
                       {e.title}

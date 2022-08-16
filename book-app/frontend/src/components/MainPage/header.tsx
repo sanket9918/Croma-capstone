@@ -29,12 +29,12 @@ function HeaderMainPage() {
       <div className="mt-3 md:mt-6 lg:mt-[10em]">
         {userName.length > 0 ? (
           <>
-            <h1 className="text-3xl block mb-10">Hey , {userName}</h1>
+            <h1 className="text-3xl block mb-10 font-bold">Hey , {userName}</h1>
             <Link to="/editProfile">
-              <p className="mb-5">Edit profile</p>
+              <button className="mb-5 p-2 bg-black text-white rounded-lg">Edit profile</button>
             </Link>
             <Link to="/favViewer">
-              <p className="mb-5">View Favourites</p>
+              <button className="ml-2 mb-5 p-2 bg-black text-white rounded-lg">View Favourites</button>
             </Link>
           </>
         ) : (
