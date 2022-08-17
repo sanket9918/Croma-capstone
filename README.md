@@ -31,6 +31,22 @@ Screenshots:
 - Search using open API
 <img src="./images/8.png"  height="400" />
 
+### Backend verfification (imp routes) using Postman
+- Login
+<img src="./images/9.png"  height="400" />
+- Add user
+<img src="./images/10.png"  height="400" />
+- Get one user
+<img src="./images/11.png"  height="400" />
+- Add favourite
+<img src="./images/12.png"  height="400" />
+- Delete Favourite
+<img src="./images/13.png"  height="400" />
+- Edit user details
+<img src="./images/14.png"  height="400" />
+
+
+All routes except for login and registeration require Bearer token (JWT) for authentication.
 - Technology used - 
     - Java SpringBoot - 2.2.2.RELEASE and dependencies
     - React 18
