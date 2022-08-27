@@ -1,8 +1,19 @@
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
+  let navigate = useNavigate();
+  const logout = () => {
+    sessionStorage.removeItem('key');
+    sessionStorage.removeItem('id');
+    sessionStorage.removeItem('email');
+
+    navigate("/", {
+      replace: true
+    })
+    window.location.reload()
+  }
   return (
     <>
       <div className="flex flex-wrap justify-between items-center mx-auto">
@@ -39,9 +50,16 @@ function Header() {
                 </a>
               </Link>
             </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
+            {
+              sessionStorage.getItem("key")
+                ? < li >
+                  <p onClick={logout} className="cursor-pointer">LogOut</p>
+                </li>
+                : <li>
+                  <Link to="/login">Login</Link>
+                </li>
+
+            }
           </ul>
         </div>
       </div>
