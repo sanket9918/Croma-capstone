@@ -1,12 +1,12 @@
 # Capstone Project for Croma Campus (Internal Training)
 
-The project is a ongoing project prepared to demonstrate the course content effectiveness by creating a Weather app to demostrate prficiency in the technology involved in the training.
+The project is a ongoing project prepared to demonstrate the course content effectiveness by creating apps to demostrate proficiency in the technology involved in the training.
 
 The project will get updated with the progress of the training.
 
 Screenshots:
 
-- Weather app
+- Weather app for week-1 assignment
 <p style="text-align: center;">
 
 <img src="./images/image1.png"  height="400" />
@@ -44,6 +44,8 @@ Screenshots:
 <img src="./images/13.png"  height="400" />
 - Edit user details
 <img src="./images/14.png"  height="400" />
+- View Favourites by User
+<img src="./images/15.png"  height="400" />
 
 
 All routes except for login and registeration require Bearer token (JWT) for authentication.
