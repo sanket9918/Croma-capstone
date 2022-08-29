@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Scaffold } from "../Scaffold";
 
@@ -8,6 +8,12 @@ function Login() {
   const [password, setPassword] = useState("");
   let navigate = useNavigate();
 
+
+  useEffect(() => {
+    if (sessionStorage.getItem('key')) {
+      navigate('/');
+    }
+  }, [navigate])
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     const user = {

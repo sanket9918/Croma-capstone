@@ -9,6 +9,7 @@ import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
 import EditProfile from "./components/EditProfile";
 import FavoriteViewer from "./components/FavViewer";
+import Error from "./404";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -23,6 +24,7 @@ root.render(
         <Route path="/register" element={<Register />} />
         <Route path="/editProfile" element={<EditProfile />} />
         <Route path="/favViewer" element={<FavoriteViewer />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

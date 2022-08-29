@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Scaffold } from "../Scaffold";
 
@@ -8,6 +8,12 @@ function Register() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   let navigate = useNavigate();
+
+  useEffect(() => {
+    if (sessionStorage.getItem('key')) {
+      navigate('/');
+    }
+  }, [navigate])
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
