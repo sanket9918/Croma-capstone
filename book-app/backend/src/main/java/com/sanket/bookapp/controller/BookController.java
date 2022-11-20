@@ -1,7 +1,5 @@
 package com.sanket.bookapp.controller;
 
-import javax.persistence.Entity;
-
 import com.sanket.bookapp.model.Auth;
 import com.sanket.bookapp.model.User;
 import com.sanket.bookapp.repository.UserRepository;

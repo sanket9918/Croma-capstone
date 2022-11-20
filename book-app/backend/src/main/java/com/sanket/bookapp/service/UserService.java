@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,6 +21,9 @@ public class UserService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -29,7 +33,11 @@ public class UserService implements UserDetailsService {
     }
 
     public User addUser(User user) {
-        User usr = userRepository.save(user);
+        User user1 = new User();
+        user1.setEmail(user.getEmail());
+        user1.setUserName(user.getUserName());
+        user1.setPassword(passwordEncoder.encode(user.getPassword()));
+        User usr = userRepository.save(user1);
         return usr;
     }
 
