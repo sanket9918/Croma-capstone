@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-slim
+FROM amazoncorretto:22-alpine3.19
 # RUN addgroup -S spring && adduser -S spring -G spring
 # USER spring:spring
 ARG JAR_FILE=target/*.jar
