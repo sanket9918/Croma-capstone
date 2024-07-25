@@ -27,15 +27,16 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByUserName(username);
-        return new org.springframework.security.core.userdetails.User(user.getUserName(), user.getPassword(),
+        User user = userRepository.findByEmail(username)
+                .orElseThrow(() -> new UsernameNotFoundException("username not found"));
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
                 new ArrayList<>());
     }
 
     public User addUser(User user) {
         User user1 = new User();
         user1.setEmail(user.getEmail());
-        user1.setUserName(user.getUserName());
+        user1.setFullName(user.getFullName());
         user1.setPassword(passwordEncoder.encode(user.getPassword()));
         User usr = userRepository.save(user1);
         return usr;
@@ -51,7 +52,7 @@ public class UserService implements UserDetailsService {
         Optional<User> user1 = userRepository.findById(user.getId());
         if (user1.isPresent()) {
             User _user = user1.get();
-            _user.setUserName(user.getUserName());
+            _user.setFullName(user.getFullName());
             _user.setEmail(user.getEmail());
             _user.setPassword(user.getPassword());
 

@@ -10,17 +10,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
 @SpringBootApplication
-@EnableSwagger2
 public class BookappApplication implements CommandLineRunner {
 	@Autowired
 	private UserRepository userRepository;
 
 	@Autowired
 	private FavoriteRepository favoriteRepository;
-
 
 	public static void main(String[] args) {
 
@@ -29,11 +25,11 @@ public class BookappApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		User user = new User("sanket", "sanket", "sanket@gmail.com");
-		userRepository.save(user);
+		// User user = new User("sanket", "sanket", "sanket@gmail.com");
+		// userRepository.save(user);
 
-		Favorite favorite = new Favorite("Harry potter", user);
-		favoriteRepository.save(favorite);
+		// Favorite favorite = new Favorite("Harry potter", user);
+		// favoriteRepository.save(favorite);
 	}
 
 }
